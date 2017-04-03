@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -6,7 +6,7 @@
 	<style type="text/css">
 		body{
 			background: #000;
-			text-align: center;
+			
 		}
 		*{
 			margin: 0;
@@ -18,7 +18,7 @@
 			height: 300px;
 			position: absolute;
 			left: 50%;
-			top: 40%;
+			top: 35%;
 			margin: -150px 0 0 -150px;
 			perspective: 800px;
 
@@ -26,21 +26,21 @@
 		}
 		ul li{
 			 width:100%;
-	        height:100%;
-	        position: absolute;
-	        left:0;
-	        top:0;
-	        background: #399;
-	        border: 1px solid #fff;
-	        font-size: 50px;
-	        text-align: center;
-	        line-height: 300px;
-	        color: #fff;
-	        text-shadow: 2px 2px 5px #000;
-	        opacity: 0;
-	        transition: 1s all ease;
-	        -webkit-box-reflect:below 20px -webkit-linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,.8));
-	        
+            height:100%;
+            position: absolute;
+            left:0;
+            top:0;
+            background: #399;
+            border: 1px solid #fff;
+            font-size: 50px;
+            text-align: center;
+            line-height: 300px;
+            color: #fff;
+            text-shadow: 2px 2px 5px #000;
+            opacity: 0;
+            transition: 1s all ease;
+            -webkit-box-reflect:below 20px -webkit-linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,.8));
+            
 		}
 		.left{
 			transform:translateX(-200px) rotateY(60deg);
@@ -67,15 +67,18 @@
 			z-index: 1;
 		}
 		input{
-			margin-top: 30px;
-			margin-right:50px;
+			margin-top: 20px;
+			margin-right: 20px;
 			width: 40px;
-			height: 30px
+			height: 30px;
+			
+
 		}
 		li img{
 			width: 100%;
 			height: 100%
 		}
+		div{width: 100%; text-align: center;}
 	</style>
 	<script type="text/javascript">
 		window.onload=function(){
@@ -99,15 +102,17 @@
 				for (var i = 0; i < aLi.length; i++) {
 					aLi[i].className=aClass[i]
 				}
-	
+
 			}
 		}
 	</script>
 </head>
 <body>
-	<input class="val1" type="button" value="←" />
-	<input class="val2" type="button" value="→" />
-	
+	<div>
+		<input class="val1" type="button" value="←" />
+		<input class="val2" type="button" value="→" />
+
+	</div>
 	<ul>
 		<li class="first">
 			<img src="img/2014cpb1216dotaa07s.jpg">
@@ -136,4 +141,3 @@
 	</ul>
 </body>
 </html>
-
