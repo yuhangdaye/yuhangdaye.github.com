@@ -83,24 +83,41 @@
 			var Btn2=document.querySelector('.val2')
 			var aLi=document.querySelectorAll('li')
 			var aClass=[];
+			var brady=true;
 			for (var i = 0; i < aLi.length; i++) {
 				aClass.push(aLi[i].className)
 			};
 			//alert(aClass)
 			Btn2.onclick=function(){
+				
+				if(!brady){
+					return
+				}
+				
+				brady=false;
 				aClass.unshift(aClass.pop())
 				//alert(aClass)
 				for (var i = 0; i < aLi.length; i++) {
 					aLi[i].className=aClass[i]
 				}
+				document.querySelector('.right').addEventListener('transitionend',function(){
+				brady=true;
+			},false)
 			}
 			Btn1.onclick=function(){
+				if(!brady)return;
+				brady=false;
 				aClass.push(aClass.shift())
 				for (var i = 0; i < aLi.length; i++) {
 					aLi[i].className=aClass[i]
 				}
+				document.querySelector('.left').addEventListener('transitionend',function(){
+					brady=true;
+				},false)
 
 			}
+			
+			
 		}
 	</script>
 </head>
